@@ -4,11 +4,13 @@ import {
   ApolloClient,
   InMemoryCache,
   HttpLink,
-  from, ApolloProvider
+  from,
+  ApolloProvider
 } from '@apollo/client';
 import {onError} from "@apollo/client/link/error";
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,7 +18,7 @@ const root = ReactDOM.createRoot(
 
 const errorLink = onError(({ graphQLErrors }) => {
   if (graphQLErrors) {
-    graphQLErrors.map((message) => {
+    graphQLErrors.map((message): void => {
       alert(`Graphql error ${message}`);
     });
   }
@@ -39,3 +41,5 @@ root.render(
     </BrowserRouter>
   </ApolloProvider>
 );
+
+reportWebVitals();
