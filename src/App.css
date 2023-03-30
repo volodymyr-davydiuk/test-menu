@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+}
+
+a {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  color: #ffffff;
+  background-color: #252525;
+}
