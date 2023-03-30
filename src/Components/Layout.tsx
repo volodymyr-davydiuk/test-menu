@@ -18,6 +18,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
       setMenuItem(data.menuItems.data);
     }
   }, [data]);
+
   return (
     <div className={"app-container"}>
       <Header menuItems={menuItem}/>
